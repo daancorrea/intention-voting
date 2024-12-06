@@ -86,3 +86,4 @@ Front-end:
 - Testes (unitários e integração).
 - Refatoração de alguns métodos (isolamento para respeitar Single-Responsibility).
 - Nomenclaturas.
+- Docker para rodar todos os projetos.
