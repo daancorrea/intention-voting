@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AuxCities {
+  id          Int    @id @default(autoincrement())
+  fileName    String
+  lastChecked String
+
+  @@index([fileName])
+}
+
+model Voting {
+  id              Int      @id @default(autoincrement())
+  searchId        String
+  searchDate      DateTime
+  city            String
+  votingIntention String
+  state           String
+  createdAt       DateTime @default(now())
+
+  @@index([city])
+  @@index([searchId])
+}
+
+model IntentionResult {
+  id              Int      @id @default(autoincrement())
+  searchId        String
+  state           String
+  statePopulation Int
+  percentVoting   Int
+  candidateAhead  String
+  createdAt       DateTime @default(now())
+
+  @@index([searchId, state])
+}
