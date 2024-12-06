@@ -87,3 +87,7 @@ Front-end:
 - Refatoração de alguns métodos (isolamento para respeitar Single-Responsibility).
 - Nomenclaturas.
 - Docker para rodar todos os projetos.
+---
+Vídeo:
+https://github.com/user-attachments/assets/346bdf42-e995-4b4e-a289-6af286e38fb1
+
